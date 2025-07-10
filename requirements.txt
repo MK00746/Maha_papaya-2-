@@ -3,4 +3,3 @@ nest_asyncio
 requests
 Flask
 playwright
-telegram
