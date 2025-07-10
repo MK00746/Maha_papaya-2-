@@ -186,13 +186,17 @@ async def handle_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 # === Start Polling ===
 async def run_bot():
     app = ApplicationBuilder().token(BOT_TOKEN).build()
+
     app.add_handler(CommandHandler("start", start))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_command))
 
     print("✅ PapaYa Bot is running with polling.")
     await app.run_polling()
 
+
+
 # === Entrypoint ===
 if __name__ == "__main__":
     nest_asyncio.apply()
     asyncio.run(run_bot())
+
