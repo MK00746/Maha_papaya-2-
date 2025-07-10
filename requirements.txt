@@ -1,6 +1,5 @@
 python-telegram-bot==20.6
-
+Flask
 nest_asyncio
 requests
-Flask
 playwright
